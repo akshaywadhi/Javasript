@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Remove</title>
+</head>
+<body>
+    <input type="number" id="input" />
+    <button onclick="remarr()">RemArr</button>
+    <script>
+       
+        function remarr(){
+            var arr = [1,2,3];
+           var rem = document.getElementById('box');
+            for(var i = 0;i < arr.length; i++){
+               rem.value = arr.pop()
+               document.write(rem.value + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>

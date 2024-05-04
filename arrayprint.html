@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Print</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3,4,5,6,7,8,9,10]
+        var sum = 0;
+for (var i = 0; i < arr.length; i++) {
+   sum = sum + arr[i];
+   document.write(sum + "<br>")
+}
+
+
+
+// print elements of an array in reverse order
+let arr = [10, 20, 30, 40, 50];
+
+for (let i = arr.length - 1; i >= 0; i--) {
+  console.log(arr[i]);
+}
+
+let arr = [1, 2, 3, 4, 5];
+
+// remove first element
+arr.shift();
+console.log(arr); // first element '1' is removed
+
+let arr = [1, 2, 3, 4, 5];
+// remove from the beginning
+arr.shift(); // [2, 3, 4, 5]
+console.log(arr);
+
+arr = [1, 2, 3, 4, 5];
+// remove from the end
+arr.pop(); // [1, 2, 3, 4]
+console.log(arr);
+
+arr = [1, 2, 3, 4, 5];
+// remove from any position (index 2 here)
+arr.splice(2, 1); // [1, 2, 4, 5]
+console.log(arr);
+
+
+let numbers = [10, 5, 8, 3, 15, 7];
+
+// Assume the first element is the smallest
+let smallest = numbers[0];
+
+// Iterate through the array starting from the second element
+for (let i = 1; i < numbers.length; i++) {
+  // Compare each element with the current smallest
+  if (numbers[i] < smallest) {
+    smallest = numbers[i];
+  }
+}
+
+// Print the smallest number
+console.log("The smallest number is:", smallest);
+</script>
+</body>
+</html>

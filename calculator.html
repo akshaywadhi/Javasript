@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: #e0e3ec;
+        }
+            .child{
+                display:grid;
+                grid-template-columns:repeat(4,1fr);
+                border:none;
+                border-radius: 10px;
+                padding:20px;
+                gap:10px;
+                background-color: white;
+                box-shadow:0px 0px 5px #e0e3ec;
+
+            }
+
+            .input-grid{
+                grid-column:1/5;
+                grid-row:1/2;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+    
+            }
+            #box{
+                width:95%;
+                display:flex;
+                border:none;
+                height:50px;
+                border:none;
+                margin-bottom:10px;
+                text-align: right;
+                font-weight: bold;
+                font-size:28px;
+
+            }
+
+            .parent{
+                margin-top:150px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            button{
+                padding:20px;
+                background-color:#eeeeee;
+                box-shadow:0px 0px 5px #e0e3ec;
+                color:black;
+                border-radius: 10px;
+                border:none;
+                font-weight: bold;
+                font-size:20px;
+                cursor: pointer;
+            }
+
+            .color{
+                color:#8fb0bf;
+            }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <div class="input-grid">
+                <input type="text" id="box" readonly/>
+            </div>
+            <button class="color" onclick="clr()">AC</button>
+            <button class="color" onclick="del()">DEL</button>
+            <button class="color" onclick="show('%')">%</button>
+            <button class="color" onclick="show('/')">/</button>
+            <button onclick="show('7')">7</button>
+            <button onclick="show('8')">8</button>
+            <button onclick="show('9')">9</button>
+            <button class="color" onclick="show('*')">*</button>
+            <button onclick="show('4')">4</button>
+            <button onclick="show('5')">5</button>
+            <button onclick="show('6')">6</button>
+            <button class="color" onclick="show('-')">-</button>
+            <button onclick="show('1')">1</button>
+            <button onclick="show('2')">2</button>
+            <button onclick="show('3')">3</button>
+            <button class="color" onclick="show('+')">+</button>
+            <button onclick="show('0')">0</button>
+            <button onclick="show('00')">00</button>
+            <button onclick="show('.')">.</button>
+            <button class="color" onclick ="result()">=</button>
+        </div>
+    </div>
+    <script>
+
+        function show(number){
+            var a = document.getElementById('box');
+             a.value = a.value + number;
+        }
+
+
+        function clr(){
+            document.getElementById('box').value = '';
+        }
+        
+
+        function del(){
+            document.getElementById('box').value=document.getElementById('box').value.slice(0,-1); 
+        }
+     
+        function result() {
+    var a = document.getElementById('box');
+    a.value = eval(a.value);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const temp1 = [35, 25, 45, 12, 5, 32, "error", 46, 9, 24];
+      const temp2 = [45, 36, 47, 15, "error", 3, 45, 25, 34, 13];
+      const temp3 = [45, 36, 58, 15, "error", 3, 45, 25, 34, -1];
+
+      //Using Expression Function
+
+      const calcTemp = function (arr, arr2, arr3) {
+        let mergeArray = arr.concat(arr2, arr3);
+        console.log(mergeArray);
+
+        let max = mergeArray[0];
+        let min = mergeArray[0];
+
+        for (let i = 0; i < mergeArray.length; i++) {
+          let storeArray = mergeArray[i];
+
+          if (typeof storeArray !== "number") continue;
+          if (storeArray > max) max = storeArray;
+          if (storeArray < min) min = storeArray;
+        }
+        console.log(max, min);
+        return max - min;
+      };
+
+      console.log(calcTemp(temp1, temp2, temp3));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swappingValues</title>
+</head>
+<body>
+    <button onclick="swapone()">Swap One</button>
+    <button onclick="swaptwo()">Swap Two</button>
+    <button onclick="swapthree()">Swap Three</button>
+    <button onclick="swapfour()">Swap Four</button>
+    <script>
+
+        var a = 10;
+        var b = 20;
+       
+function swapone(){
+    
+var z = a;
+a = b;
+b = z;
+console.log("Using Third Variable : a = " +  a + " b = " + b);
+}
+
+function swaptwo(){
+    a = 10;
+    b = 20;
+    a = b;
+    b = b - 10  ;
+console.log("Using Operator : a = " +  a + " b = " + b)
+}
+
+function swapthree(){
+    var a=10;
+    var b=20;
+    var arr = [a,b]
+    a = arr[1]
+    b = arr[0]
+    console.log(typeof a)
+}
+
+function swapfour(){
+    var a = 10;
+    var b =20;
+    var swap = {a:b, b:a}
+    a=swap.a
+    b=swap.b
+    console.log(typeof a)
+}
+
+    </script>
+</body>
+</html>

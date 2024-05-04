@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dolphins = (97+112+81)/3;
+        let koalas = (109 + 95 + 86)/3
+        console.log(dolphins, koalas)
+
+        if(dolphins>koalas && dolphins > 100){
+            console.log('The Winner Of Competition Is Dolphins With ' + dolphins + ' Score')
+        }
+
+        else if(koalas>dolphins && koalas>100){
+            console.log('The Winner Of Competition Is Koalas With ' + koalas + ' Score')
+        }
+
+        else if(dolphins===koalas && dolphins> 100 && koalas>100){
+            console.log('The Match Is Draw')
+        }
+
+        else {
+            console.log('No Team Wins')
+        }
+    </script>
+</body>
+</html>

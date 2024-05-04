@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function</title>
+</head>
+<style>
+ div{
+    height:200px;
+    width:200px;
+    background-color: red;
+    margin-top:20px;
+
+ }   
+
+ button{
+    margin-top: 10px;
+ }
+
+
+</style>
+<body>
+    <div id="parent">
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <div id="five"></div>
+</div>
+    <button onclick="hide()">Hide</button>
+    <button onclick="visible()">Display</button>
+
+    <script>
+        function hide(){
+            document.getElementById('parent').style.visibility='hidden';
+            
+        }
+
+        function visible(){
+            document.getElementById('parent').style.visibility='visible';
+        }
+        </script>
+</body>
+</html>

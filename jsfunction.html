@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions In Javascript</title>
+    <style>
+            div{
+                height:100px;
+                width:100px;
+                border:none;
+                border-radius:10px;
+                background:linear-gradient(to right,rgb(225, 124, 141),red);
+                margin-top:10px;
+            }
+
+            button{
+                border:none;
+                border-radius:20px;
+                color:white;
+                background-color: rgb(74, 74, 154);
+            }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+<button onclick="allbox()">Change Color and Size</button>
+<script>
+    function allbox(){
+    document.getElementById('box1').style.background='red';
+    document.getElementById('box2').style.height='0px';
+    document.getElementById('box3').style.width='0px';
+    }
+</script>
+
+</body>
+</html>

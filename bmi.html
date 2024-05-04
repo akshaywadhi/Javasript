@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+<body>
+    <script>
+        let marks_mass = 78;
+        let marks_height = 1.69;
+        let john_mass = 92;
+        let john_height= 1.95;
+        let bmimark= marks_mass / marks_height ** 2;
+        let bmijohn= john_mass/ john_height**2;
+        let marksHigherBMI = bmimark > bmijohn
+
+        if(marksHigherBMI){
+            console.log(`Marks BMI ${bmimark} Is Higher Than John's ${bmijohn}`)
+        }
+
+        else{
+            console.log(`John's BMI ${bmijohn} Is Higher Than Mark's ${bmimark}`)
+        }
+
+    </script>
+</body>
+</html>

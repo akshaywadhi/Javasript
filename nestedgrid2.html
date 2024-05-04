@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Grid 2</title>
+    <style>
+        .parent{
+            display:grid;
+            grid-template-columns:repeat(2, 750px);
+            grid-template-rows:repeat(3,230px);
+            gap:15px;
+            
+        }
+
+        .parent div{
+            border:none;
+            background-color:#00ffff;
+            text-align: left;
+            font-size:60px;
+            padding-left:20px;
+        
+
+        }
+
+        .parent2{
+            display:grid;
+            grid-template-columns:repeat(3, 225px);
+            grid-template-rows:repeat(3,110px);
+            gap:10px 28px;
+            
+        }
+
+        .color{
+            background-color: white;
+        }
+
+        .parent2 div{
+            border:none;
+            background-color:#7effd4;
+            text-align: left;
+            font-size:30px;
+            font-weight:normal;
+            margin-left:-20px;
+            
+        }
+
+        .parent2:hover{
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+        <div class="parent2 color">
+            <div class="box5">i</div>
+            <div class="box6">ii</div>
+            <div class="box7">iii</div>
+            <div class="box8">iv</div>
+            <div class="box7">v</div>
+            <div class="box8">vi</div>
+        </div>
+        <div class="box1">Five</div>
+        <div class="box2">Six</div>
+    </div>
+</body>
+</html>

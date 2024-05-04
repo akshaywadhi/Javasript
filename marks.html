@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Checking</title>
+</head>
+<body>
+    <script>
+        var arr = [60,60,60,60,60,160]
+        var n = 100;
+        for(var i = 0; i<arr.length;i++){
+            
+        if(arr[i]<=n){
+            ok=true;
+            if(6==arr.length){
+                var sum = 0;
+                for(var i = 0; i < arr.length; i++){
+                    sum = sum + arr[i]
+                }
+                var marks = sum*100/600;
+                alert(marks)
+            }
+
+            if(marks>=80){
+                document.write("You Got A Grade")
+            }
+
+            else if(marks>=60){
+                document.write("You Got B Grade")
+            }
+
+            else if(marks>=45){
+                document.write("You Got C Grade")
+            }
+
+            else if(marks>=35){
+                document.write("You Got D Grade")
+            }
+
+            else{
+                document.write("You Are Failed")
+            }
+
+
+        }
+
+        else{
+            alert("You Are Disqualified")
+        }
+    }
+    </script>
+</body>
+</html>

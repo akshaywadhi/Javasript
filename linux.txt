@@ -1,0 +1,39 @@
+=>TO REMOVE PASSWORD ASKING IN TERMINAL WHENEVER WE USE SUDO COMMAND:
+
+Grant passwordless sudo access to your user.: This option is more secure than using the sudo -n option, as it only allows you to run commands with sudo privileges. To grant passwordless sudo access to your user, you need to edit the sudoers file.
+To edit the sudoers file, open it in a text editor with root privileges. For example, to open the sudoers file in nano, you would type sudo nano /etc/sudoers.
+Once you have opened the sudoers file, add the following line to the end of the file:
+<username> ALL=(ALL) NOPASSWD: ALL
+Use code with caution.
+
+=>To Reboot Or Shutdown Linux :
+reboot
+shutdown -h now
+
+=>This Is 45 Tricks And Tips For linux mint User
+https://easylinuxtipsproject.blogspot.com/p/tips-1.html#ID15
+
+=>Move Chrome Cache Location
+The symlink command generally looks like this…
+
+ln -s [new-location] [old-location]
+Copy
+This has been tested on xubuntu and ubuntu.
+
+Make sure to close chrome browser.
+Create a hidden folder in your new location called “.google-chrome”
+Delete the old chrome location usually found at “/home/USERNAME/.cache/google-chrome”. You can use the following command for this.
+rm -rf ~/.cache/google-chrome
+Copy
+Now re-create the old chrome location you deleted as a symlink to the new location with this command.
+ln -s /new/location/path/.google-chrome ~/.cache/google-chrome
+Copy
+After opening chrome, if you’d like to check, open your file manager and go to “/home/USERNAME/.cache/google-chrome”. Right click on the folder and select “Properties”. You should see that for “Volume” it should show the new cache location.
+
+That is all. You have now moved the chrome cache location in linux and don’t need to worry about it anymore.
+
+=>node install
+https://www.esparkinfo.com/blog/how-to-update-node-js-to-latest-version.html
+
+=> when linux mint update command showing some errors
+echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Making Simple Calculator</title>
+</head>
+<body>
+	<input type="text" id="box1" />
+	<input type="text" id="box2" />
+	<button onclick="cal(a,b)">Calculate</button>
+	<script>
+		function cal(a,b) {
+			var a = document.getElementById('box1').value;
+			var b = document.getElementById('box2').value;
+			document.write(cal(a*b));
+		}
+	</script>
+</body>
+</html>
