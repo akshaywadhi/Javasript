@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50to80</title>
+</head>
+
+<body style="text-align: center;">
+    <h3>write a Javascript program to compute the sum of the two given integers. if the sum is in the range 50 to 80 return 65 otherwise return 80</h3>
+    <input type="text" placeholder="First Integer" id="num"/> <br><br>
+    <input type="text" placeholder="Second Integer" id="bum"/> <br><br>
+    <button onclick="sum()">Sum</button> <br><br>
+    <script>
+        function sum(){
+        let num = document.getElementById('num').value;
+        let bum = document.getElementById('bum').value;
+        let sum = + num + + bum;
+        if(sum>=50 && sum<=80){
+            alert("The Sum Is "+ sum + " This Is Between 50 to 80 So Answer Is (65)")
+        }
+        
+        else{
+            alert("The Sum Is "+ sum + " This Is Not Between 50 to 80 So Answer Is (80)")
+        }
+       
+    }
+
+    </script>
+</body>
+</html>

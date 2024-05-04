@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sum Calculator</title>
+</head>
+<body>
+
+<label for="input">Enter a number:</label>
+<input type="text" id="input">
+<button onclick="addToArr()">Add to Array</button>
+<button onclick="calculateSum()">Calculate Sum</button>
+
+<script>
+    var arr = [10, 20, 30];
+
+    // Function to add a number to the array
+    function addToArr() {
+        var inputValue = parseInt(document.getElementById('input').value);
+
+        if (!isNaN(inputValue)) {
+            arr.push(inputValue);
+            alert("Number added to array: " + inputValue);
+        } else {
+            alert("Please enter a valid number.");
+        }
+    }
+
+    // Function to calculate the sum of an array
+    function calculateSum() {
+        var sum = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        alert("Sum of the array elements: " + sum);
+    }
+</script>
+
+</body>
+</html>

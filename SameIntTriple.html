@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SameIntTriple</title>
+</head>
+
+<body style="text-align: center;">
+    <h3>Write a javascript program to compute the sum of the two given integers. if the two values are the same, then return triple their sum</h3>
+    <input type="text" placeholder="First Integer" id="num"/> <br><br>
+    <input type="text" placeholder="Second Integer" id="bum"/> <br><br>
+    <button onclick="sum()">Sum</button> <br><br>
+    <script>
+        function sum(){
+        let num = document.getElementById('num').value;
+        let bum = document.getElementById('bum').value;
+        let sum;
+        if(num!=bum){
+            sum = + num + +bum;
+            alert("Values Are Different So Sum Is = " +sum)
+        }
+
+        else if(num==bum){
+            sum = (+num + + bum) * 3;
+            alert("Value Are Same So Triple Is = "+sum)
+        }
+       
+    }
+
+    </script>
+</body>
+</html>

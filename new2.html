@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+</head>
+<body style="text-align:center">
+    <input type="number" placeholder="Marathi/Hindi" id="Marathi" />
+    <input type="number" placeholder="English" id="English" />
+    <input type="number" placeholder="Science" id="Science" />
+    <input type="number" placeholder="Math" id="Math" />
+    <input type="number" placeholder="Computer" id="Computer" />
+    <input type="number" placeholder="Social Activities" id="SocialActivities" /><br><br>
+    <button onclick="sum()">Calculate Sum Of Subject</button> <button onclick="best()">Best Of Five</button><br><br>
+    <h4>Total Marks</h4>
+    <h3 id="total"></h3>
+    <h4>Percetage</h4>
+   <h3 id="sumoutput" style="display:inline"></h3><span>%</span><br><br> <br>
+    <table border="3" style="margin-right:auto;margin-left:auto; font-size:25px; margin-top:50px;">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Subject</th>
+            <th>Min-Marks</th>
+            <th>Max-Marks</th>
+            <th>Obtained Marks</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Marathi/Hindi</td>
+            <td>35</td>
+            <td>100</td>
+            <td id="obtained1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>English</td>
+            <td>35</td>
+            <td>100</td>
+            <td id="obtained2"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Science</td>
+            <td>35</td>
+            <td>100</td>
+            <td id="obtained3"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Math</td>
+            <td>35</td>
+            <td>100</td>
+            <td id="obtained4"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Computer</td>
+            <td>35</td>
+            <td>100</td>
+            <td id="obtained5"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Social Activities</td>
+            <td>35</td>
+            <td>100</td>
+            <td id="obtained6"></td>
+        </tr>
+    </table>
+<script>
+        function sum(){
+        var marathi = document.getElementById('Marathi').value;
+        var english = document.getElementById('English').value;
+        var science = document.getElementById('Science').value;
+        var math = document.getElementById('Math').value;
+        var computer = document.getElementById('Computer').value;
+        var social = document.getElementById('SocialActivities').value;
+        document.getElementById('obtained1').innerHTML = marathi;
+        document.getElementById('obtained2').innerHTML = english;
+        document.getElementById('obtained3').innerHTML = science;
+        document.getElementById('obtained4').innerHTML = math;
+        document.getElementById('obtained5').innerHTML = computer;
+        document.getElementById('obtained6').innerHTML = social;
+        var sum =+ marathi+ + english + + science + + math + + computer + + social;
+        var per = sum*100/600;
+        var perc= parseInt(per);
+        document.getElementById('total').innerHTML = sum;
+        document.getElementById('sumoutput').innerHTML = perc;
+    }
+
+    function best(){
+        var marathi = document.getElementById('Marathi').value;
+        var english = document.getElementById('English').value;
+        var science = document.getElementById('Science').value;
+        var math = document.getElementById('Math').value;
+        var computer = document.getElementById('Computer').value;
+        var social = document.getElementById('SocialActivities').value;
+        var arr = [];
+        arr.push(marathi,english,science,math,computer,social)
+        var small = arr[0];
+        var sum = 0;
+        for(var i = 0; i < arr.length; i++){
+            if(arr[i] < small){
+                small = arr[i];
+                delete arr[i]
+            }
+        }
+       console.log(small)
+        console.log(arr)
+        
+
+        
+        for(var j =1; j< arr.length;j++){
+            if(arr[j]==undefined){
+                arr[j]=0;
+            }
+        }
+        console.log(arr)
+
+        for(var k = 0; k< arr.length; k++){
+            sum = +sum+ + arr[k]
+        }
+        console.log(sum)
+    } 
+
+</script>
+</body>
+</html>

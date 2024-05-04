@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 or 7 rem</title>
+</head>
+
+<body style="text-align: center;">
+    <h3>write a Javascript program to check whether a given positive number is a multiple of 3 or 7</h3>
+    <input type="text" placeholder="First Integer" id="num"/> <br><br>
+    <input type="text" placeholder="Second Integer" id="bum"/> <br><br>
+    <button onclick="sum()">Sum</button> <br><br>
+    <script>
+        function sum(){
+        let num = document.getElementById('num').value;
+        let bum = document.getElementById('bum').value;
+        let sum = + num + + bum;
+        let rem = sum % 3;
+        let rem2 = sum % 7;
+        if(rem==0 && rem2==0){
+            alert("Sum Is : " + sum +" Number Is Multiple Of 3 & 7")
+        }
+        else if (rem==0 ){
+            alert("Sum Is : " + sum +" Number Is Multiple Of 3")
+        }
+        else if(rem2==0){
+            alert("Number Is Multiple Of 7")
+        }
+
+      else {
+        alert("Number Is Not Multiple Of 3 & 7")
+      }
+
+       
+    }
+
+    </script>
+</body>
+</html>

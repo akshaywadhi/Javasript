@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Percentage</title>
+</head>
+<body style="text-align:center; font-size:30px; margin-top:300px;">
+    <script>
+        var arr=[30,10,60,10,10,10]
+        if(arr[0]<=100 && arr[1]<=100 && arr[2]<=100 && arr[3]<=100 && arr[4]<=100 && arr[5]<=100){
+            if(6==arr.length){
+                var total = 0;
+                for(var i = 0; i<arr.length;i++){
+                    total = total + arr[i]
+                }
+                var marks = total*100/600;
+                per = parseInt(marks)
+                alert(per)
+                if(per>=35 && per<=59){
+                    document.write('You Are Pass With Grade C : '+ per+ ' %')
+                }
+
+                else if(per>=60 && per<=79){
+                    document.write('You Are Pass With Grade B : '+ per + ' %')
+                }
+
+                else if(per>=80){
+                    document.write('You Are Pass With Grade A : '+ per + ' %')
+                }
+
+                else{
+                    document.write('Sorry! You Are Fail, Better Luck Next Time')
+                }
+            }
+                
+        }
+        else{
+                    document.write('Problem In Marking')
+                }
+    </script>
+</body>
+</html>

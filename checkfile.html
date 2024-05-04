@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <button onclick="space()">check</button>
+    <button onclick="add()">sum</button>
+    <script>
+        var arr = [200,52,85];
+        function space(){
+
+        var small = arr[0];
+        for(var k=0; k<arr.length; k++){
+            if(arr[k]< small){
+                small = arr[k];
+                delete arr[k]
+            }
+        }
+        
+        console.log(arr)
+    }
+
+    function add(){
+        for(var m =0;m<arr.length;m++){
+            if(arr[m]==undefined){
+                arr[m]=0;
+            }
+        }
+        var sum =0;
+        for(var i =0; i < arr.length; i++){
+            sum = sum + arr[i]
+        }
+        console.log(sum)
+        }
+
+    </script>
+ </body>
+ </html>

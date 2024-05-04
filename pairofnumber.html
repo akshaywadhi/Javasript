@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PairOfNumbers</title>
+</head>
+
+<body style="text-align: center;">
+    <h3>write a Javascript program to check a pair of numbers & return true if one of the numbers is 50 or if their sum is 50</h3>
+    <input type="text" placeholder="First Integer" id="num"/> <br><br>
+    <input type="text" placeholder="Second Integer" id="bum"/> <br><br>
+    <button onclick="sum()">Sum</button> <br><br>
+    <script>
+        function sum(){
+        let num = document.getElementById('num').value;
+        let bum = document.getElementById('bum').value;
+        let check = 50;
+        let sum = +num + + bum;
+        if (sum == check){
+            alert("True")
+        }
+        else if(num == check || bum == check){
+            alert("True")
+        }
+
+        else if(num!=check && bum != check){
+          alert("False")
+        }
+
+
+       
+    }
+
+    </script>
+</body>
+</html>

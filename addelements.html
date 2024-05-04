@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayadd</title>
+</head>
+<body style="text-align: center;">
+    <input type = "text" id="input" /><br><br>
+    <button onclick="add()">Add Elements</button>
+    <h3 id="m"></h3>
+    <button onclick="total()">Total Value</button>
+    <h3 id="h"></h3>
+
+    <script>
+         var arr = [10,20,30]
+        function add(){
+            var a = document.getElementById('input').value;
+            arr.push(a)
+            document.getElementById('m').innerHTML = arr;
+        }
+
+        function total() {
+               var sum = 0;
+               for(var i= 0; i < arr.length; i++){
+                sum = + sum + + arr[i]
+               }
+               document.getElementById('h').innerHTML = sum;
+        }
+    </script>
+</body>
+</html>
