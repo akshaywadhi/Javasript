@@ -1,0 +1,44 @@
+When react scripts are not found
+npm install --save react react-dom react-scripts
+if this still dont work :
+
+update to latest npm version : npm install -g npm@latest
+delete node_modules directory
+reinstall all dependencies : npm install
+
+
+
+To upgrade Node you may first want to see which version of Node.js you are currently using:
+
+node --version
+Find out which versions of Node.js you may have installed and which one of those you're currently using:
+
+nvm ls
+List all versions of Node.js available for installation:
+
+nvm ls-remote
+Apparently for Windows the command would be rather like this:
+
+nvm ls available
+Assuming you would pick Node.js v8.1.0 for installation you'd type the following to install that version:
+
+nvm install 8.1.0
+You are then free to choose between installed versions of Node.js. So if you would need to use an older version like v4.2.0 you would set it as the active version like this:
+
+nvm use 4.2
+That should be all.
+
+
+
+
+
+
+
+Step 1. Configure Git in your Workspace
+In your shell, add your user name: git config --global user.name "your_username"
+
+Add your email address: git config --global user.email "your_email_address@example.com"
+
+To check the configuration, run: git config --global --list
+
+
